@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 380" width="100%" height="100%">
+  <defs>
+    <linearGradient id="uc-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#071b3e"/>
+      <stop offset="50%" stop-color="#0a2a66"/>
+      <stop offset="100%" stop-color="#030f24"/>
+    </linearGradient>
+    <linearGradient id="uc-btn" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0066ff"/>
+      <stop offset="100%" stop-color="#00d4ff"/>
+    </linearGradient>
+    <filter id="uc-shadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="14" flood-color="#000000" flood-opacity="0.7"/>
+    </filter>
+    <filter id="uc-glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#00d4ff" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Laptop Mockup -->
+  <g filter="url(#uc-shadow)">
+    <!-- Laptop Outer Screen Bezel -->
+    <rect x="25" y="20" width="450" height="280" rx="14" fill="#0b111e" stroke="#1e293b" stroke-width="2"/>
+    <!-- Laptop Camera -->
+    <circle cx="250" cy="27" r="2.5" fill="#334155"/>
+    <circle cx="250" cy="27" r="1" fill="#00d4ff"/>
+
+    <!-- Screen Display Area -->
+    <g clip-path="url(#uc-clip)">
+      <clipPath id="uc-clip">
+        <rect x="35" y="35" width="430" height="255" rx="6"/>
+      </clipPath>
+      
+      <!-- Screen Background -->
+      <rect x="35" y="35" width="430" height="255" fill="url(#uc-bg)"/>
+
+      <!-- Browser Top Bar -->
+      <rect x="35" y="35" width="430" height="26" fill="#091428"/>
+      <circle cx="48" cy="48" r="3.5" fill="#ef4444"/>
+      <circle cx="59" cy="48" r="3.5" fill="#f59e0b"/>
+      <circle cx="70" cy="48" r="3.5" fill="#10b981"/>
+      <rect x="130" y="40" width="220" height="16" rx="4" fill="#13233f"/>
+      <text x="240" y="52" fill="#7ba3d8" font-family="'Segoe UI', sans-serif" font-size="8" text-anchor="middle">https://urbancart.store</text>
+
+      <!-- Store Navbar -->
+      <rect x="35" y="61" width="430" height="28" fill="#0c1b36" opacity="0.95"/>
+      <text x="50" y="79" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="12">URBAN<tspan fill="#00d4ff">CART</tspan></text>
+      
+      <!-- Search Bar -->
+      <rect x="150" y="66" width="130" height="18" rx="9" fill="#15294a"/>
+      <text x="165" y="78" fill="#7ba3d8" font-family="'Segoe UI', sans-serif" font-size="7.5">Search products...</text>
+      
+      <!-- Nav Links -->
+      <text x="320" y="78" fill="#cbd5e1" font-family="'Segoe UI', sans-serif" font-size="8">Home  Shop  Categories  Deals</text>
+
+      <!-- Hero Section -->
+      <g transform="translate(50, 100)">
+        <text x="0" y="24" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="22" letter-spacing="-0.5">Upgrade</text>
+        <text x="0" y="48" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="22" letter-spacing="-0.5">Your Style</text>
+        <text x="0" y="66" fill="#93c5fd" font-family="'Segoe UI', sans-serif" font-size="8.5">Premium Products - Best Prices</text>
+        <rect x="0" y="76" width="70" height="20" rx="10" fill="url(#uc-btn)"/>
+        <text x="35" y="89" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="8" text-anchor="middle">Shop Now</text>
+
+        <!-- Sneakers Graphic -->
+        <g transform="translate(145, -5)">
+          <path d="M10,65 Q30,40 60,35 Q90,32 105,45 Q115,55 125,58 L125,72 Q100,75 20,74 Z" fill="#0284c7"/>
+          <path d="M25,60 Q50,42 75,38 Q100,36 115,48 L120,68 Q95,71 28,69 Z" fill="#38bdf8"/>
+          <path d="M15,70 Q70,73 130,70 L130,76 Q65,80 12,76 Z" fill="#ffffff"/>
+          <ellipse cx="65" cy="46" rx="12" ry="4" fill="#ffffff" opacity="0.6"/>
+        </g>
+
+        <!-- Headphones Graphic -->
+        <g transform="translate(235, -10)">
+          <path d="M15,55 A35,35 0 0,1 65,55" fill="none" stroke="#1e293b" stroke-width="6"/>
+          <path d="M15,55 A35,35 0 0,1 65,55" fill="none" stroke="#38bdf8" stroke-width="2"/>
+          <rect x="8" y="50" width="14" height="26" rx="7" fill="#0f172a" stroke="#00d4ff" stroke-width="1.5"/>
+          <rect x="58" y="50" width="14" height="26" rx="7" fill="#0f172a" stroke="#00d4ff" stroke-width="1.5"/>
+        </g>
+      </g>
+
+      <!-- Category Strip -->
+      <g transform="translate(50, 230)">
+        <rect x="0" y="0" width="60" height="42" rx="6" fill="#0f2242"/>
+        <text x="30" y="20" font-size="12" text-anchor="middle">📱</text>
+        <text x="30" y="34" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="7" font-weight="600" text-anchor="middle">Mobiles</text>
+
+        <rect x="75" y="0" width="60" height="42" rx="6" fill="#0f2242"/>
+        <text x="105" y="20" font-size="12" text-anchor="middle">💻</text>
+        <text x="105" y="34" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="7" font-weight="600" text-anchor="middle">Laptops</text>
+
+        <rect x="150" y="0" width="60" height="42" rx="6" fill="#0f2242"/>
+        <text x="180" y="20" font-size="12" text-anchor="middle">👕</text>
+        <text x="180" y="34" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="7" font-weight="600" text-anchor="middle">Fashion</text>
+
+        <rect x="225" y="0" width="60" height="42" rx="6" fill="#0f2242"/>
+        <text x="255" y="20" font-size="12" text-anchor="middle">🎧</text>
+        <text x="255" y="34" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="7" font-weight="600" text-anchor="middle">Audio</text>
+
+        <rect x="300" y="0" width="60" height="42" rx="6" fill="#0f2242"/>
+        <text x="330" y="20" font-size="12" text-anchor="middle">🏠</text>
+        <text x="330" y="34" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="7" font-weight="600" text-anchor="middle">Living</text>
+      </g>
+    </g>
+
+    <!-- Laptop Base -->
+    <path d="M10,300 L490,300 L510,312 L0,312 Z" fill="#1e293b"/>
+    <rect x="210" y="300" width="80" height="4" rx="2" fill="#475569"/>
+  </g>
+
+  <!-- Overlapping Smartphone Mockup -->
+  <g transform="translate(420, 100)" filter="url(#uc-shadow)">
+    <!-- Phone Body -->
+    <rect x="0" y="0" width="145" height="260" rx="24" fill="#0a0f1d" stroke="#334155" stroke-width="3"/>
+    <rect x="2" y="2" width="141" height="256" rx="22" fill="#030712" stroke="#00d4ff" stroke-width="1"/>
+    
+    <!-- Phone Screen Content -->
+    <g clip-path="url(#uc-phone-clip)">
+      <clipPath id="uc-phone-clip">
+        <rect x="6" y="8" width="133" height="244" rx="18"/>
+      </clipPath>
+      
+      <rect x="6" y="8" width="133" height="244" fill="url(#uc-bg)"/>
+      
+      <!-- Phone Top Notch -->
+      <rect x="42" y="10" width="60" height="12" rx="6" fill="#000000"/>
+      <circle cx="85" cy="16" r="2.5" fill="#1e293b"/>
+      
+      <!-- Phone App Header -->
+      <text x="18" y="38" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="9">URBAN<tspan fill="#00d4ff">CART</tspan></text>
+      <text x="120" y="38" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-size="9">🛒</text>
+
+      <!-- Phone Hero -->
+      <text x="18" y="60" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="12">Upgrade</text>
+      <text x="18" y="74" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="900" font-size="12">Your Style</text>
+      <text x="18" y="88" fill="#93c5fd" font-family="'Segoe UI', sans-serif" font-size="6.5">Trending Best Deals</text>
+      <rect x="18" y="94" width="55" height="16" rx="8" fill="url(#uc-btn)"/>
+      <text x="45" y="105" fill="#ffffff" font-family="'Segoe UI', sans-serif" font-weight="700" font-size="6.5" text-anchor="middle">Shop Now</text>
+
+      <!-- Phone Shoe Illustration -->
+      <g transform="translate(68, 65) scale(0.6)">
+        <path d="M10,65 Q30,40 60,35 Q90,32 105,45 Q115,55 125,58 L125,72 Q100,75 20,74 Z" fill="#0284c7"/>
+        <path d="M25,60 Q50,42 75,38 Q100,36 115,48 L120,68 Q95,71 28,69 Z" fill="#38bdf8"/>
+        <path d="M15,70 Q70,73 130,70 L130,76 Q65,80 12,76 Z" fill="#ffffff"/>
+      </g>
+
+      <!-- Phone Grid Icons -->
+      <g transform="translate(14, 125)">
+        <rect x="0" y="0" width="34" height="34" rx="6" fill="#0f2242"/>
+        <text x="17" y="16" font-size="10" text-anchor="middle">📱</text>
+        <text x="17" y="28" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="5" text-anchor="middle">Mobiles</text>
+
+        <rect x="42" y="0" width="34" height="34" rx="6" fill="#0f2242"/>
+        <text x="59" y="16" font-size="10" text-anchor="middle">💻</text>
+        <text x="59" y="28" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="5" text-anchor="middle">Laptops</text>
+
+        <rect x="84" y="0" width="34" height="34" rx="6" fill="#0f2242"/>
+        <text x="101" y="16" font-size="10" text-anchor="middle">👕</text>
+        <text x="101" y="28" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="5" text-anchor="middle">Fashion</text>
+
+        <rect x="0" y="40" width="34" height="34" rx="6" fill="#0f2242"/>
+        <text x="17" y="56" font-size="10" text-anchor="middle">🎧</text>
+        <text x="17" y="68" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="5" text-anchor="middle">Audio</text>
+
+        <rect x="42" y="40" width="34" height="34" rx="6" fill="#0f2242"/>
+        <text x="59" y="56" font-size="10" text-anchor="middle">⌚</text>
+        <text x="59" y="68" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="5" text-anchor="middle">Watches</text>
+
+        <rect x="84" y="40" width="34" height="34" rx="6" fill="#0f2242"/>
+        <text x="101" y="56" font-size="10" text-anchor="middle">🏠</text>
+        <text x="101" y="68" fill="#94a3b8" font-family="'Segoe UI', sans-serif" font-size="5" text-anchor="middle">Home</text>
+      </g>
+
+      <!-- Bottom Phone Indicator -->
+      <rect x="45" y="244" width="45" height="3" rx="1.5" fill="#ffffff" opacity="0.6"/>
+    </g>
+  </g>
+</svg>
