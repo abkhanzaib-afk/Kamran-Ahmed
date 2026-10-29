@@ -1,0 +1,91 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1600" width="800" height="1600">
+  <defs>
+    <linearGradient id="p5-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#064e3b" />
+      <stop offset="100%" stop-color="#022c22" />
+    </linearGradient>
+    <linearGradient id="p5-teal" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#14b8a6" />
+      <stop offset="100%" stop-color="#0d9488" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1600" fill="url(#p5-bg)" />
+
+  <!-- Browser Header -->
+  <rect width="800" height="40" fill="#022c22" />
+  <circle cx="20" cy="20" r="6" fill="#ef4444" />
+  <circle cx="38" cy="20" r="6" fill="#f59e0b" />
+  <circle cx="56" cy="20" r="6" fill="#10b981" />
+  <rect x="150" y="10" width="500" height="20" rx="6" fill="#065f46" />
+  <text x="400" y="24" fill="#99f6e4" font-family="sans-serif" font-size="11" text-anchor="middle">https://lotuswellness.spa</text>
+
+  <!-- Navbar -->
+  <rect y="40" width="800" height="70" fill="#065f46" />
+  <text x="40" y="82" fill="#ffffff" font-family="sans-serif" font-size="22" font-weight="bold">LOTUS<tspan fill="#5eead4">WELLNESS</tspan></text>
+  <text x="430" y="80" fill="#ccfbf1" font-family="sans-serif" font-size="13">Home   Treatments   About   Packages   Book</text>
+  <rect x="660" y="58" width="100" height="34" rx="6" fill="url(#p5-teal)" />
+  <text x="710" y="79" fill="#ffffff" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">Book Now</text>
+
+  <!-- Hero Section -->
+  <text x="400" y="180" fill="#5eead4" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle" letter-spacing="2">RELAX &amp; REJUVENATE YOUR MIND</text>
+  <text x="400" y="230" fill="#ffffff" font-family="sans-serif" font-size="34" font-weight="extrabold" text-anchor="middle">Holistic Spa &amp; Body Treatments</text>
+  <text x="400" y="270" fill="#99f6e4" font-family="sans-serif" font-size="14" text-anchor="middle">Experience therapeutic massages, organic facials, and calming spa packages.</text>
+  
+  <rect x="320" y="300" width="160" height="42" rx="6" fill="url(#p5-teal)" />
+  <text x="400" y="326" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Explore Treatments</text>
+
+  <!-- Treatments Section -->
+  <text x="400" y="410" fill="#5eead4" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">— OUR SERVICES —</text>
+  <text x="400" y="445" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Featured Spa Treatments</text>
+
+  <!-- Treatment 1 -->
+  <rect x="60" y="480" width="320" height="160" rx="8" fill="#047857" />
+  <text x="90" y="525" fill="#5eead4" font-family="sans-serif" font-size="22">💆‍♀️</text>
+  <text x="90" y="560" fill="#ffffff" font-family="sans-serif" font-size="17" font-weight="bold">Full Body Massage</text>
+  <text x="90" y="585" fill="#ccfbf1" font-family="sans-serif" font-size="13">Deep tissue and Swedish techniques for tension relief.</text>
+  <text x="90" y="615" fill="#5eead4" font-family="sans-serif" font-size="15" font-weight="bold">60 Mins • \$80</text>
+
+  <!-- Treatment 2 -->
+  <rect x="420" y="480" width="320" height="160" rx="8" fill="#047857" />
+  <text x="450" y="525" fill="#5eead4" font-family="sans-serif" font-size="22">✨</text>
+  <text x="450" y="560" fill="#ffffff" font-family="sans-serif" font-size="17" font-weight="bold">Organic Herbal Facial</text>
+  <text x="450" y="585" fill="#ccfbf1" font-family="sans-serif" font-size="13">Natural botanical skin cleansing and hydration ritual.</text>
+  <text x="450" y="615" fill="#5eead4" font-family="sans-serif" font-size="15" font-weight="bold">45 Mins • \$65</text>
+
+  <!-- Treatment 3 -->
+  <rect x="60" y="660" width="320" height="160" rx="8" fill="#047857" />
+  <text x="90" y="705" fill="#5eead4" font-family="sans-serif" font-size="22">🌿</text>
+  <text x="90" y="740" fill="#ffffff" font-family="sans-serif" font-size="17" font-weight="bold">Body Detox Scrub</text>
+  <text x="90" y="765" fill="#ccfbf1" font-family="sans-serif" font-size="13">Exfoliating sea salt and essential oil skin therapy.</text>
+  <text x="90" y="795" fill="#5eead4" font-family="sans-serif" font-size="15" font-weight="bold">50 Mins • \$75</text>
+
+  <!-- Treatment 4 -->
+  <rect x="420" y="660" width="320" height="160" rx="8" fill="#047857" />
+  <text x="450" y="705" fill="#5eead4" font-family="sans-serif" font-size="22">🧘‍♀️</text>
+  <text x="450" y="740" fill="#ffffff" font-family="sans-serif" font-size="17" font-weight="bold">Relaxation Aromatherapy</text>
+  <text x="450" y="765" fill="#ccfbf1" font-family="sans-serif" font-size="13">Calming essential oil scent therapy for total peace.</text>
+  <text x="450" y="795" fill="#5eead4" font-family="sans-serif" font-size="15" font-weight="bold">60 Mins • \$85</text>
+
+  <!-- Packages Section -->
+  <rect y="860" width="800" height="340" fill="#022c22" />
+  <text x="400" y="910" fill="#5eead4" font-family="sans-serif" font-size="12" font-weight="bold" text-anchor="middle">— SPA PACKAGES —</text>
+  <text x="400" y="945" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Relaxation Day Packages</text>
+
+  <rect x="60" y="980" width="320" height="170" rx="8" fill="#065f46" />
+  <text x="80" y="1020" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold">Serenity Half-Day Package</text>
+  <text x="80" y="1050" fill="#ccfbf1" font-family="sans-serif" font-size="13">Includes Full Body Massage + Herbal Facial + Herbal Tea.</text>
+  <text x="80" y="1090" fill="#5eead4" font-family="sans-serif" font-size="20" font-weight="bold">\$135 / Person</text>
+
+  <rect x="420" y="980" width="320" height="170" rx="8" fill="#065f46" />
+  <text x="440" y="1020" fill="#ffffff" font-family="sans-serif" font-size="18" font-weight="bold">Ultimate Couples Retreat</text>
+  <text x="440" y="1050" fill="#ccfbf1" font-family="sans-serif" font-size="13">Side-by-side couples massage + Detox scrub + Private room.</text>
+  <text x="440" y="1090" fill="#5eead4" font-family="sans-serif" font-size="20" font-weight="bold">\$240 / Couple</text>
+
+  <!-- Footer -->
+  <rect y="1240" width="800" height="360" fill="#022c22" />
+  <text x="400" y="1320" fill="#ffffff" font-family="sans-serif" font-size="24" font-weight="bold" text-anchor="middle">Book Your Spa Appointment Today</text>
+  <rect x="330" y="1350" width="140" height="42" rx="6" fill="url(#p5-teal)" />
+  <text x="400" y="1376" fill="#ffffff" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Reserve Now</text>
+  <text x="400" y="1520" fill="#99f6e4" font-family="sans-serif" font-size="12" text-anchor="middle">© 2026 Lotus Wellness Spa. All rights reserved.</text>
+</svg>
