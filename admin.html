@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin Control Panel | Kamran Ahmed Portfolio</title>
+  
+  <!-- Google Fonts & Font Awesome Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <link rel="stylesheet" href="admin-styles.css">
+</head>
+<body>
+
+  <!-- Toast Notification -->
+  <div class="toast-msg" id="toastMsg"><i class="fas fa-check-circle"></i> <span id="toastText">Changes saved successfully!</span></div>
+
+  <!-- 1. LOGIN SCREEN -->
+  <div class="login-wrapper" id="loginScreen">
+    <div class="login-card">
+      <div class="login-logo">
+        <span style="color: #ffffff;">KAMRAN</span> <span style="color: var(--primary-cyan);">AHMED</span>
+      </div>
+      <p class="login-sub">Admin Control Panel Login</p>
+      
+      <div id="loginError" style="display: none; background: rgba(239, 68, 68, 0.15); border: 1px solid #ef4444; color: #ef4444; padding: 10px; border-radius: 8px; margin-bottom: 16px; font-size: 0.85rem;">
+        <i class="fas fa-exclamation-circle"></i> Invalid Username or Password!
+      </div>
+
+      <form id="loginForm">
+        <div class="form-group">
+          <label class="form-label" for="loginUser">Admin Username</label>
+          <input type="text" id="loginUser" class="form-control" placeholder="e.g. admin" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="loginPass">Password</label>
+          <input type="password" id="loginPass" class="form-control" placeholder="••••••••" required>
+        </div>
+        <button type="submit" class="btn-cyan" style="width: 100%; justify-content: center; padding: 12px; margin-top: 10px;">
+          LOG IN TO DASHBOARD <i class="fas fa-sign-in-alt"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- 2. DASHBOARD MAIN LAYOUT -->
+  <div class="dashboard-layout" id="dashboardLayout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <a href="index.html" class="sidebar-brand" target="_blank">
+        <i class="fas fa-shield-halved" style="color: var(--primary-cyan);"></i>
+        <span>ADMIN <span style="color: var(--primary-cyan);">PORTAL</span></span>
+      </a>
+
+      <ul class="sidebar-menu">
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link active" data-panel="overview"><i class="fas fa-chart-line"></i> <span>Overview</span></a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" data-panel="heroPanel"><i class="fas fa-laptop"></i> <span>Hero Section</span></a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" data-panel="servicesPanel"><i class="fas fa-cubes"></i> <span>Services</span></a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" data-panel="portfolioPanel"><i class="fas fa-briefcase"></i> <span>Portfolio Projects</span></a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" data-panel="reviewsPanel"><i class="fas fa-star"></i> <span>Client Reviews</span></a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" data-panel="pricingPanel"><i class="fas fa-tags"></i> <span>Pricing Plans</span></a>
+        </li>
+        <li class="sidebar-item">
+          <a href="#" class="sidebar-link" data-panel="contactPanel"><i class="fas fa-address-book"></i> <span>Contact Info</span></a>
+        </li>
+      </ul>
+    </aside>
+
+    <!-- Main Content Area -->
+    <main class="main-content">
+      <header class="topbar">
+        <div class="topbar-title" id="topbarTitle">Dashboard Overview</div>
+        <div class="topbar-actions">
+          <a href="index.html" target="_blank" class="btn-outline"><i class="fas fa-external-link-alt"></i> View Live Website</a>
+          <button class="btn-cyan" id="logoutBtn"><i class="fas fa-sign-out-alt"></i> Logout</button>
+        </div>
+      </header>
+
+      <!-- Panel 1: Overview -->
+      <section class="panel-view active" id="overview">
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3 class="panel-title">Welcome Back, Kamran Ahmed! 👋</h3>
+          </div>
+          <p style="color: var(--text-muted); margin-bottom: 24px;">Manage all website sections, add or edit portfolio projects, update services, client reviews, and contact details with instant live sync.</p>
+
+          <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 20px;">
+            <div style="background: rgba(0,240,255,0.06); border: 1px solid var(--border-cyan); border-radius: 16px; padding: 20px;">
+              <h4 style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">TOTAL PROJECTS</h4>
+              <span id="statProjects" style="font-size: 2rem; font-weight: 800; color: var(--primary-cyan);">6</span>
+            </div>
+            <div style="background: rgba(0,240,255,0.06); border: 1px solid var(--border-cyan); border-radius: 16px; padding: 20px;">
+              <h4 style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">CLIENT REVIEWS</h4>
+              <span id="statReviews" style="font-size: 2rem; font-weight: 800; color: var(--primary-cyan);">6</span>
+            </div>
+            <div style="background: rgba(0,240,255,0.06); border: 1px solid var(--border-cyan); border-radius: 16px; padding: 20px;">
+              <h4 style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">SERVICES OFFERED</h4>
+              <span id="statServices" style="font-size: 2rem; font-weight: 800; color: var(--primary-cyan);">3</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Panel 2: Hero Section Manager -->
+      <section class="panel-view" id="heroPanel">
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3 class="panel-title">Manage Hero Section Content</h3>
+          </div>
+          <form id="heroForm">
+            <div class="form-group">
+              <label class="form-label">Availability Badge Text</label>
+              <input type="text" id="heroBadge" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Main Headline</label>
+              <input type="text" id="heroHeadline" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subtext / Description</label>
+              <textarea id="heroSubtext" class="form-control" required></textarea>
+            </div>
+            <button type="submit" class="btn-cyan"><i class="fas fa-save"></i> Save Hero Changes</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Panel 3: Services Manager -->
+      <section class="panel-view" id="servicesPanel">
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3 class="panel-title">Services Provided</h3>
+            <button class="btn-cyan" id="addServiceBtn"><i class="fas fa-plus"></i> Add New Service</button>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Description</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="servicesTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Panel 4: Portfolio Projects Manager (Our Featured Works) -->
+      <section class="panel-view" id="portfolioPanel">
+        <div class="panel-card">
+          <div class="panel-header">
+            <div>
+              <h3 class="panel-title">Portfolio Projects (Featured Works)</h3>
+              <p style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">Live preview and management of the 6 Featured Works websites shown on your homepage.</p>
+            </div>
+            <button class="btn-cyan" id="addProjectBtn"><i class="fas fa-plus"></i> Add New Project</button>
+          </div>
+
+          <!-- Live Card Previews in Dashboard -->
+          <div style="margin-bottom: 30px;">
+            <h4 style="font-size: 0.95rem; color: var(--primary-cyan); margin-bottom: 16px; text-transform: uppercase; letter-spacing: 0.5px;"><i class="fas fa-eye"></i> Live Cards Preview (Exact Design)</h4>
+            <div class="portfolio-grid" id="adminPortfolioPreviewGrid"></div>
+          </div>
+
+          <!-- Project Management Table -->
+          <h4 style="font-size: 0.95rem; color: var(--text-white); margin-bottom: 14px; text-transform: uppercase;"><i class="fas fa-list"></i> Manage Projects Data</h4>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Preview</th>
+                <th>Project Name</th>
+                <th>Category</th>
+                <th>Country</th>
+                <th>Rating</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="portfolioTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Panel 5: Client Reviews Manager -->
+      <section class="panel-view" id="reviewsPanel">
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3 class="panel-title">Client Reviews</h3>
+            <button class="btn-cyan" id="addReviewBtn"><i class="fas fa-plus"></i> Add New Review</button>
+          </div>
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Client Name / Project</th>
+                <th>Review Quote</th>
+                <th>Role Label</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="reviewsTableBody"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- Panel 6: Pricing Manager -->
+      <section class="panel-view" id="pricingPanel">
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3 class="panel-title">Pricing Packages</h3>
+          </div>
+          <form id="pricingForm">
+            <h4 style="color: var(--primary-cyan); margin-bottom: 12px;">Package 01 (Starter)</h4>
+            <div class="form-group">
+              <label class="form-label">Subtitle</label>
+              <input type="text" id="p1Sub" class="form-control">
+            </div>
+
+            <h4 style="color: var(--primary-cyan); margin: 20px 0 12px;">Package 02 (Professional - Featured)</h4>
+            <div class="form-group">
+              <label class="form-label">Subtitle</label>
+              <input type="text" id="p2Sub" class="form-control">
+            </div>
+
+            <h4 style="color: var(--primary-cyan); margin: 20px 0 12px;">Package 03 (Premium)</h4>
+            <div class="form-group">
+              <label class="form-label">Subtitle</label>
+              <input type="text" id="p3Sub" class="form-control">
+            </div>
+
+            <button type="submit" class="btn-cyan"><i class="fas fa-save"></i> Save Pricing Plans</button>
+          </form>
+        </div>
+      </section>
+
+      <!-- Panel 7: Contact Info Manager -->
+      <section class="panel-view" id="contactPanel">
+        <div class="panel-card">
+          <div class="panel-header">
+            <h3 class="panel-title">Contact & Location Info</h3>
+          </div>
+          <form id="contactFormAdmin">
+            <div class="form-group">
+              <label class="form-label">Phone Number</label>
+              <input type="text" id="adminPhone" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" id="adminEmail" class="form-control" required>
+            </div>
+            <div class="form-group">
+              <label class="form-label">Google Maps Live Location URL</label>
+              <input type="text" id="adminMapUrl" class="form-control" required>
+            </div>
+            <button type="submit" class="btn-cyan"><i class="fas fa-save"></i> Save Contact Info</button>
+          </form>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <!-- Project Add/Edit Modal (Featured Works) -->
+  <div class="admin-modal" id="projectEditModal">
+    <div class="admin-modal-content" style="max-height: 90vh; overflow-y: auto;">
+      <h3 style="font-size: 1.3rem; margin-bottom: 18px;" id="projectModalTitle">Add New Project</h3>
+      <form id="projectModalForm">
+        <input type="hidden" id="editProjectId">
+        <div class="form-group">
+          <label class="form-label">Project Name / Brand Title</label>
+          <input type="text" id="editProjectTitle" class="form-control" placeholder="e.g. URBANCART STORE" required>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Category</label>
+            <input type="text" id="editProjectCategory" class="form-control" placeholder="e.g. E-COMMERCE" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Category Icon (FontAwesome class)</label>
+            <input type="text" id="editProjectCategoryIcon" class="form-control" placeholder="e.g. fas fa-shopping-cart" required>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Country / Location</label>
+            <input type="text" id="editProjectLocation" class="form-control" placeholder="e.g. Pakistan, USA, France" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Star Rating (e.g. 4.5 / 4.9 / 3.5)</label>
+            <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+              <div class="star-picker" id="starPicker">
+                <span class="star-btn" data-val="1">★</span>
+                <span class="star-btn" data-val="2">★</span>
+                <span class="star-btn" data-val="3">★</span>
+                <span class="star-btn" data-val="4">★</span>
+                <span class="star-btn" data-val="5">★</span>
+              </div>
+              <input type="number" id="editProjectRating" class="form-control"
+                     min="1" max="5" step="0.1" value="5.0"
+                     style="width:80px; text-align:center; font-weight:700; color:#f59e0b; font-size:1rem;">
+            </div>
+            <div id="starRatingLabel" style="color:#94a3b8; font-size:0.78rem; margin-top:5px;">
+              Click stars OR type exact value (e.g. 4.5, 4.9, 3.5)
+            </div>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+          <div class="form-group">
+            <label class="form-label">Website Preview Image (File/URL)</label>
+            <input type="text" id="editProjectPreview" class="form-control" placeholder="e.g. project4.svg" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Live Website URL / Order Link</label>
+            <input type="text" id="editProjectLiveUrl" class="form-control" placeholder="e.g. https://urbancart.store" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Short Description</label>
+          <textarea id="editProjectDesc" class="form-control" rows="2" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Client Review Quote</label>
+          <textarea id="editProjectReview" class="form-control" rows="2" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Client Label (e.g. — Sample E-commerce Client)</label>
+          <input type="text" id="editProjectClientLabel" class="form-control" required>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+          <button type="button" class="btn-outline" id="closeProjectModal">Cancel</button>
+          <button type="submit" class="btn-cyan">Save Project</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Review Add/Edit Modal -->
+  <div class="admin-modal" id="reviewEditModal">
+    <div class="admin-modal-content">
+      <h3 style="font-size: 1.3rem; margin-bottom: 18px;" id="reviewModalTitle">Edit Client Review</h3>
+      <form id="reviewModalForm">
+        <input type="hidden" id="editReviewProjectId">
+        <div class="form-group">
+          <label class="form-label">Client Name / Project Title</label>
+          <input type="text" id="editReviewClientName" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Client Review Quote</label>
+          <textarea id="editReviewQuote" class="form-control" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Role Label (e.g. — French Creative Studio)</label>
+          <input type="text" id="editReviewRoleLabel" class="form-control" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label">Review Star Rating (e.g. 4.5 / 4.9 / 3.5)</label>
+          <div style="display:flex; align-items:center; gap:10px; margin-top:6px;">
+            <div class="star-picker" id="reviewStarPicker">
+              <span class="star-btn" data-val="1">★</span>
+              <span class="star-btn" data-val="2">★</span>
+              <span class="star-btn" data-val="3">★</span>
+              <span class="star-btn" data-val="4">★</span>
+              <span class="star-btn" data-val="5">★</span>
+            </div>
+            <input type="number" id="editReviewRating" class="form-control"
+                   min="1" max="5" step="0.1" value="5.0"
+                   style="width:80px; text-align:center; font-weight:700; color:#f59e0b; font-size:1rem;">
+          </div>
+          <div id="reviewStarLabel" style="color:#94a3b8; font-size:0.78rem; margin-top:5px;">
+            Click stars OR type exact value (e.g. 4.5, 4.9, 3.5)
+          </div>
+        </div>
+        <div style="display: flex; gap: 10px; justify-content: flex-end; margin-top: 20px;">
+          <button type="button" class="btn-outline" id="closeReviewModal">Cancel</button>
+          <button type="submit" class="btn-cyan">Save Review</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="admin-script.js"></script>
+</body>
+</html>
