@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1600" width="800" height="1600">
+  <defs>
+    <linearGradient id="p3-bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0a0a0c" />
+      <stop offset="50%" stop-color="#141418" />
+      <stop offset="100%" stop-color="#050507" />
+    </linearGradient>
+    <linearGradient id="p3-gold" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#fbbf24" />
+      <stop offset="100%" stop-color="#d97706" />
+    </linearGradient>
+  </defs>
+
+  <rect width="800" height="1600" fill="url(#p3-bg)" />
+
+  <!-- Browser Header -->
+  <rect width="800" height="40" fill="#050507" />
+  <circle cx="20" cy="20" r="6" fill="#ef4444" />
+  <circle cx="38" cy="20" r="6" fill="#f59e0b" />
+  <circle cx="56" cy="20" r="6" fill="#10b981" />
+  <rect x="150" y="10" width="500" height="20" rx="6" fill="#1c1c22" />
+  <text x="400" y="24" fill="#a1a1aa" font-family="sans-serif" font-size="11" text-anchor="middle">https://haroonr-studio.dev</text>
+
+  <!-- Navbar -->
+  <rect y="40" width="800" height="70" fill="#141418" />
+  <text x="40" y="82" fill="#fbbf24" font-family="serif" font-size="24" font-weight="bold">HAROON<tspan fill="#ffffff">R</tspan></text>
+  <text x="460" y="80" fill="#d4d4d8" font-family="sans-serif" font-size="13">Projects   Arcade   Code Vault   Game Corner</text>
+
+  <!-- Split Banner Header -->
+  <rect x="50" y="140" width="700" height="100" rx="10" fill="#1c1c22" stroke="#fbbf24" stroke-width="1" />
+  <text x="70" y="195" fill="#ffffff" font-family="monospace" font-size="22" font-weight="bold">FINANCE BY DAY.</text>
+  <text x="480" y="195" fill="#fbbf24" font-family="monospace" font-size="22" font-weight="bold">CODE BY NIGHT.</text>
+
+  <!-- Main Hero Collage Box -->
+  <rect x="50" y="260" width="700" height="340" rx="14" fill="#0f0f12" stroke="#27272a" />
+  <text x="400" y="320" fill="#d97706" font-family="sans-serif" font-size="12" font-weight="bold" letter-spacing="3" text-anchor="middle">CREATIVE DEVELOPER &amp; DESIGNER</text>
+  <text x="400" y="375" fill="#ffffff" font-family="serif" font-size="48" font-weight="bold" text-anchor="middle">HAROON RASHIDI</text>
+  <text x="400" y="415" fill="#a1a1aa" font-family="sans-serif" font-size="14" text-anchor="middle">"Wisdom is taught by experience; the web is where he spends it."</text>
+
+  <!-- Mini Grid Collage Inside Hero -->
+  <rect x="90" y="440" width="180" height="120" rx="8" fill="#1c1c22" />
+  <text x="180" y="505" fill="#fbbf24" font-family="serif" font-size="16" font-weight="bold" text-anchor="middle">The Prince</text>
+
+  <rect x="310" y="440" width="180" height="120" rx="8" fill="#1c1c22" />
+  <text x="400" y="505" fill="#fbbf24" font-family="serif" font-size="16" font-weight="bold" text-anchor="middle">Pixel Arcade</text>
+
+  <rect x="530" y="440" width="180" height="120" rx="8" fill="#1c1c22" />
+  <text x="620" y="505" fill="#fbbf24" font-family="serif" font-size="16" font-weight="bold" text-anchor="middle">Finance Vault</text>
+
+  <!-- Showcase Cards Section -->
+  <rect y="640" width="800" height="600" fill="#050507" />
+  <text x="400" y="690" fill="#fbbf24" font-family="sans-serif" font-size="12" font-weight="bold" letter-spacing="2" text-anchor="middle">— RETRO TECH &amp; CREATIVE CODE —</text>
+  <text x="400" y="725" fill="#ffffff" font-family="serif" font-size="26" font-weight="bold" text-anchor="middle">Haroon's Work Collection</text>
+
+  <!-- Card 1 -->
+  <rect x="60" y="760" width="320" height="200" rx="10" fill="#141418" stroke="#27272a" />
+  <text x="80" y="800" fill="#fbbf24" font-family="monospace" font-size="13">01 // RETRO GAME CORNER</text>
+  <text x="80" y="835" fill="#ffffff" font-family="serif" font-size="18" font-weight="bold">Pixel Street Fighter Engine</text>
+  <text x="80" y="865" fill="#a1a1aa" font-family="sans-serif" font-size="12">HTML5 Canvas 2D Arcade Engine &amp; Sprites</text>
+
+  <!-- Card 2 -->
+  <rect x="420" y="760" width="320" height="200" rx="10" fill="#141418" stroke="#27272a" />
+  <text x="440" y="800" fill="#fbbf24" font-family="monospace" font-size="13">02 // BLACKSITE-09</text>
+  <text x="440" y="835" fill="#ffffff" font-family="serif" font-size="18" font-weight="bold">Cyberpunk Audio Console</text>
+  <text x="440" y="865" fill="#a1a1aa" font-family="sans-serif" font-size="12">Custom Sound Wave Visualizer &amp; Web Audio</text>
+
+  <!-- Footer -->
+  <rect y="1280" width="800" height="320" fill="#0a0a0c" />
+  <text x="400" y="1360" fill="#ffffff" font-family="serif" font-size="24" font-weight="bold" text-anchor="middle">HaroonR Portfolio &amp; Labs</text>
+  <rect x="330" y="1390" width="140" height="42" rx="6" fill="url(#p3-gold)" />
+  <text x="400" y="1416" fill="#050507" font-family="sans-serif" font-size="13" font-weight="bold" text-anchor="middle">Explore Vault</text>
+  <text x="400" y="1520" fill="#71717a" font-family="sans-serif" font-size="12" text-anchor="middle">© 2026 HaroonR Studio. All rights reserved.</text>
+</svg>
