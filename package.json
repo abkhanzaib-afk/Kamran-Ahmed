@@ -1,0 +1,12 @@
+{
+  "name": "kamran-portfolio",
+  "version": "1.0.0",
+  "description": "Kamran Ahmed Portfolio Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "Kamran Ahmed",
+  "license": "ISC"
+}
